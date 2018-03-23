@@ -1,0 +1,32 @@
+import { EventEmitter, OnDestroy } from "@angular/core";
+import { NavParams } from "ionic-angular";
+import * as moment from 'moment';
+import { DatePickerProvider } from '../../providers/date-picker/date-picker';
+export declare class DatePicker implements OnDestroy {
+    private datePickerProvider;
+    params: NavParams;
+    onDateSelected: EventEmitter<Date>;
+    onCancelled: EventEmitter<any>;
+    currentMoment: moment.Moment;
+    daysGroupedByWeek: any[];
+    private selectedDateItem;
+    private daysOfMonth;
+    private calendarModal;
+    private datePickerOption?;
+    constructor(datePickerProvider: DatePickerProvider, params?: NavParams);
+    ngOnDestroy(): void;
+    setMonthBack(): void;
+    setMonthForward(): void;
+    setYearBack(): void;
+    setYearForward(): void;
+    cancel(): void;
+    confirmDateSelection(): void;
+    private renderCalender();
+    private generateDaysOfMonth(year, month, day);
+    private groupByWeek(daysOfMonth);
+    private selectDate(day);
+    private setTodayAsDefaultSelectedDate();
+    private isBelongToThisMonth(momentDate, month);
+    private startingFrom(currentMomentDate);
+    private endingAt(endingMomentDate);
+}

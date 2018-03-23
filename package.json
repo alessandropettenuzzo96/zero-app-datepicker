@@ -1,0 +1,75 @@
+{
+  "name": "ionic2-date-picker",
+  "version": "1.1.2",
+  "description": "Ionic 2 Date Picker",
+  "main": "./src-inlined/index.js",
+  "typings": "./src-inlined/index.d.ts",
+  "license": "MIT",
+  "keywords": [
+    "ionic",
+    "aot",
+    "aot-compatible",
+    "aot-compilation",
+    "library",
+    "date",
+    "calendar",
+    "picker",
+    "date-picker",
+    "typescript"
+  ],
+  "author": {
+    "name": "Lim Shang Yi",
+    "url": "https://www.linkedin.com/in/shang-yi-lim"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shangyilim/ionic2-date-picker.git"
+  },
+  "bugs": {
+    "url": "https://github.com/shangyilim/ionic2-date-picker/issues"
+  },
+  "homepage": "https://github.com/shangyilim/ionic2-date-picker#readme",
+  "scripts": {
+    "build": "ngc build -p ./tsconfig.json && cpx package.json dist",
+    "prebuild": "rimraf dist src-inlined && gulp inline-templates"
+  },
+  "dependencies": {
+    "ionic-angular": "^3.9.2",
+    "ionicons": "3.0.0",
+    "moment": "^2.20.1"
+  },
+  "peerDependencies": {},
+  "devDependencies": {
+    "@angular/common": "5.0.0",
+    "@angular/compiler": "5.0.0",
+    "@angular/compiler-cli": "5.0.0",
+    "@angular/core": "5.0.0",
+    "@angular/forms": "5.0.0",
+    "@angular/http": "5.0.0",
+    "@angular/platform-browser": "5.0.0",
+    "@angular/platform-browser-dynamic": "5.0.0",
+    "@types/node": "^8.0.0",
+    "@types/webpack": "^3.0.13",
+    "@types/webpack-env": "^1.13.0",
+    "angular2-template-loader": "^0.6.2",
+    "cpx": "^1.5.0",
+    "css-loader": "^0.28.1",
+    "gh-pages": "^1.0.0",
+    "gulp": "^3.9.1",
+    "gulp-inline-ng2-template": "^4.0.0",
+    "jasmine-core": "^2.6.1",
+    "json-loader": "^0.5.4",
+    "node-sass": "^4.5.2",
+    "rimraf": "^2.6.1",
+    "rxjs": "5.5.2",
+    "sass-loader": "^6.0.5",
+    "sw-toolbox": "3.6.0",
+    "ts-node": "^3.0.4",
+    "tslint": "^5.2.0",
+    "typescript": "2.4.2",
+    "webpack": "^3.6.0",
+    "webpack-angular-externals": "^1.0.2",
+    "webpack-rxjs-externals": "^1.0.0",
+    "zone.js": "0.8.18"
+  }
+}
